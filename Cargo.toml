@@ -1,0 +1,33 @@
+[workspace]
+members = [
+  "examples/cu_dorabench",
+]
+default-members = [
+  "examples/cu_dorabench",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.15.0"
+authors = ["Guillaume Binet <gbin@gootz.net>"]
+edition = "2024"
+rust-version = "1.95"
+license = "Apache-2.0"
+keywords = ["robotics", "middleware", "copper", "real-time"]
+categories = ["science::robotics"]
+homepage = "https://github.com/copper-project"
+repository = "https://github.com/copper-project/benchmarks"
+
+[workspace.dependencies]
+cu29 = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
+cu29-export = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
+cu-consolemon = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
+
+bincode = { package = "cu-bincode", version = "2.0", default-features = false, features = [
+  "derive",
+  "alloc",
+] }
+serde = { version = "1.0", default-features = false, features = [
+  "derive",
+  "alloc",
+] }

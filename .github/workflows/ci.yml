@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  repository_dispatch:
+    types: [copper-rs-master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check:
+    name: Benchmark Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Check
+        run: just check
