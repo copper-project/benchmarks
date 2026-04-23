@@ -25,4 +25,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Check
-        run: just check
+        run: |
+          cargo check --workspace --all-targets
+          cargo check --manifest-path examples/dora_caterpillar/Cargo.toml --all-targets
+          cargo check --manifest-path examples/horus_caterpillar/Cargo.toml --all-targets
