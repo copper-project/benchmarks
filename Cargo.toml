@@ -1,9 +1,13 @@
 [workspace]
 members = [
   "examples/cu_dorabench",
+  "examples/cu_async_cl_io_bench",
+  "examples/cu_zenoh_bridge_bench",
 ]
 default-members = [
   "examples/cu_dorabench",
+  "examples/cu_async_cl_io_bench",
+  "examples/cu_zenoh_bridge_bench",
 ]
 resolver = "2"
 
@@ -22,6 +26,10 @@ repository = "https://github.com/copper-project/benchmarks"
 cu29 = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
 cu29-export = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
 cu-consolemon = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
+cu-zenoh-bridge = { git = "https://github.com/copper-project/copper-rs.git", branch = "master" }
+
+clap = { version = "4.5", default-features = false, features = ["std", "derive", "help", "usage", "error-context"] }
+tempfile = { version = "3.23", default-features = false }
 
 bincode = { package = "cu-bincode", version = "2.0", default-features = false, features = [
   "derive",
