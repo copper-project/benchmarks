@@ -39,10 +39,14 @@ workflow via GitHub's `workflow_dispatch` API.
 ## Checks
 
 ```bash
-just check
+just pr-check
 ```
 
-CI checks the Copper benchmark workspace plus the standalone DORA and Horus
+`just pr-check` runs formatting verification, the benchmark compile checks, and
+the `cu-dorabench` unit tests.
+
+`just check` remains available when you only want the compile-smoke pass. CI
+checks the Copper benchmark workspace plus the standalone DORA and Horus
 comparison crates. The ROS 2 workspaces under `examples/ros_caterpillar` and
 `examples/ros_zenoh_caterpillar` are kept here as comparison material and are
 not built by the default CI job.
