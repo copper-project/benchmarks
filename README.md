@@ -17,15 +17,18 @@ example set.
 
 This repository currently contains:
 
+- `examples/cu_async_cl_io_bench`: CopperList logging and async CL I/O benchmark
 - `examples/cu_dorabench`: Copper-side benchmark matching `dora-rs/dora-benchmark`
+- `examples/cu_zenoh_bridge_bench`: Zenoh bridge transport latency benchmark
 - `examples/dora_caterpillar`: DORA version of the caterpillar benchmark
 - `examples/horus_caterpillar`: Horus version of the caterpillar benchmark
+- `examples/ros_caterpillar`: ROS 2 comparison workspace
 - `examples/ros_zenoh_caterpillar`: ROS 2 + Zenoh comparison workspace
 
 The Copper dependencies intentionally track the `master` branch of
 [`copper-project/copper-rs`](https://github.com/copper-project/copper-rs). CI
-can be triggered from the main Copper repository with the `copper-rs-master`
-repository dispatch event.
+can be triggered from the main Copper repository by dispatching this `CI`
+workflow via GitHub's `workflow_dispatch` API.
 
 ## Links
 
@@ -44,8 +47,9 @@ the `cu-dorabench` unit tests.
 
 `just check` remains available when you only want the compile-smoke pass. CI
 checks the Copper benchmark workspace plus the standalone DORA and Horus
-comparison crates. The ROS 2 workspace under `examples/ros_zenoh_caterpillar`
-is kept here as comparison material and is not built by the default CI job.
+comparison crates. The ROS 2 workspaces under `examples/ros_caterpillar` and
+`examples/ros_zenoh_caterpillar` are kept here as comparison material and are
+not built by the default CI job.
 
 ## License
 

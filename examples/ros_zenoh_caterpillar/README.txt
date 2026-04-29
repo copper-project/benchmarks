@@ -6,7 +6,7 @@ docker build -t ros-jazzy-zenoh .
 
 # be sure you are in this directory
 
-cd ~/[path_to_copper]/examples/ros_caterpillar
+cd ~/[path_to_benchmarks]/examples/ros_zenoh_caterpillar
 
 docker run --rm -it -v "$PWD":/ros2_ws -w /ros2_ws ros-jazzy-zenoh ./run.sh
 

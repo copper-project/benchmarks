@@ -1,3 +1,14 @@
+.codex
+/Cargo.lock
 /target/
 **/target/
 **/.deps/
+*.copper
+*.mcap
+cu29_logstats.json
+/examples/ros_caterpillar/build
+/examples/ros_caterpillar/install
+/examples/ros_caterpillar/log
+/examples/ros_zenoh_caterpillar/build
+/examples/ros_zenoh_caterpillar/install
+/examples/ros_zenoh_caterpillar/log
